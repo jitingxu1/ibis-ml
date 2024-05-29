@@ -16,6 +16,7 @@ dynamic = ["version", "description"]
 dask = ["dask[dataframe]"]
 doc = [
   "clickhouse-connect",
+  "dask",
   "ibis-framework[bigquery,clickhouse,dask,datafusion,duckdb,druid,examples,exasol,flink,impala,mssql,mysql,oracle,polars,postgres,pyspark,risingwave,snowflake,sqlite,trino]",
   "itables",
   "jupyter",
