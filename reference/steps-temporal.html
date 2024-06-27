@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.556">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -189,12 +189,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="dropdown-item" href="../reference/steps-other.html">
  <span class="dropdown-text">Other</span></a>
   </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Support</li>
+        <li>
+    <a class="dropdown-item" href="../reference/support-matrix/index.html">
+ <span class="dropdown-text">Transformation support matrix</span></a>
+  </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../support_matrix.html"> 
-<span class="menu-text">Support Matrix</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -322,6 +324,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Support</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reference/support-matrix/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Transformation support matrix</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -368,10 +387,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>New features will be named <code>{input_column}_{component}</code>. For example, if expanding a <code>"year"</code> component from column <code>"x"</code>, the feature column would be named <code>"x_year"</code>.</p>
 <section id="parameters" class="level2">
 <h2 class="anchored" data-anchor-id="parameters">Parameters</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 1%">
-<col style="width: 14%">
+<col style="width: 13%">
 <col style="width: 77%">
 <col style="width: 6%">
 </colgroup>
@@ -386,13 +405,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><code>inputs</code></td>
-<td>ibis_ml.select.SelectionType</td>
+<td>SelectionType</td>
 <td>A selection of date and time columns to expand into new features.</td>
 <td><em>required</em></td>
 </tr>
 <tr class="even">
 <td><code>components</code></td>
-<td>list[typing.Literal[‘day’, ‘week’, ‘month’, ‘year’, ‘dow’, ‘doy’, ‘hour’, ‘minute’, ‘second’, ‘millisecond’]]</td>
+<td>list[Literal[‘day’, ‘week’, ‘month’, ‘year’, ‘dow’, ‘doy’, ‘hour’, ‘minute’, ‘second’, ‘millisecond’]]</td>
 <td>A sequence of date or time components to expand. Options include - <code>day</code>: the day of the month as a numeric value - <code>week</code>: the week of the year as a numeric value - <code>month</code>: the month of the year as a categorical value - <code>year</code>: the year as a numeric value - <code>dow</code>: the day of the week as a categorical value - <code>doy</code>: the day of the year as a numeric value - <code>hour</code>: the hour as a numeric value - <code>minute</code>: the minute as a numeric value - <code>second</code>: the second as a numeric value - <code>millisecond</code>: the millisecond as a numeric value Defaults to <code>["dow", "month", "year", "hour", "minute", "second"]</code>.</td>
 <td><code>('dow', 'month', 'year', 'hour', 'minute', 'second')</code></td>
 </tr>
@@ -415,11 +434,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>New features will be named <code>{input_column}_{component}</code>. For example, if expanding a <code>"year"</code> component from column <code>"x"</code>, the feature column would be named <code>"x_year"</code>.</p>
 <section id="parameters-1" class="level2">
 <h2 class="anchored" data-anchor-id="parameters-1">Parameters</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 2%">
-<col style="width: 17%">
-<col style="width: 75%">
+<col style="width: 13%">
+<col style="width: 78%">
 <col style="width: 5%">
 </colgroup>
 <thead>
@@ -433,13 +452,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><code>inputs</code></td>
-<td>ibis_ml.select.SelectionType</td>
+<td>SelectionType</td>
 <td>A selection of date columns to expand into new features.</td>
 <td><em>required</em></td>
 </tr>
 <tr class="even">
 <td><code>components</code></td>
-<td>collections.abc.Sequence[typing.Literal[‘day’, ‘week’, ‘month’, ‘year’, ‘dow’, ‘doy’]]</td>
+<td>Sequence[Literal[‘day’, ‘week’, ‘month’, ‘year’, ‘dow’, ‘doy’]]</td>
 <td>A sequence of components to expand. Options include - <code>day</code>: the day of the month as a numeric value - <code>week</code>: the week of the year as a numeric value - <code>month</code>: the month of the year as a categorical value - <code>year</code>: the year as a numeric value - <code>dow</code>: the day of the week as a categorical value - <code>doy</code>: the day of the year as a numeric value Defaults to <code>["dow", "month", "year"]</code>.</td>
 <td><code>('dow', 'month', 'year')</code></td>
 </tr>
@@ -462,11 +481,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>New features will be named <code>{input_column}_{component}</code>. For example, if expanding an <code>"hour"</code> component from column <code>"x"</code>, the feature column would be named <code>"x_hour"</code>.</p>
 <section id="parameters-2" class="level2">
 <h2 class="anchored" data-anchor-id="parameters-2">Parameters</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
-<col style="width: 4%">
-<col style="width: 30%">
-<col style="width: 53%">
+<col style="width: 5%">
+<col style="width: 24%">
+<col style="width: 58%">
 <col style="width: 11%">
 </colgroup>
 <thead>
@@ -480,13 +499,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><code>inputs</code></td>
-<td>ibis_ml.select.SelectionType</td>
+<td>SelectionType</td>
 <td>A selection of time columns to expand into new features.</td>
 <td><em>required</em></td>
 </tr>
 <tr class="even">
 <td><code>components</code></td>
-<td>collections.abc.Sequence[typing.Literal[‘hour’, ‘minute’, ‘second’, ‘millisecond’]]</td>
+<td>Sequence[Literal[‘hour’, ‘minute’, ‘second’, ‘millisecond’]]</td>
 <td>A sequence of components to expand. Options include <code>hour</code>, <code>minute</code>, <code>second</code>, and <code>millisecond</code>. Defaults to <code>["hour", "minute", "second"]</code>.</td>
 <td><code>('hour', 'minute', 'second')</code></td>
 </tr>
